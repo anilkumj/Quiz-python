@@ -1,0 +1,85 @@
+print("Welcome to the quiz game!!")
+print('NOTE: if your spelling is incorrect, it will be considered as a wrong answer')
+print('NOTE : always start first letter with capital letter')
+score = 0
+question_no = 0
+playing = input('Do you want to play? ')
+
+if playing.lower() == 'yes':
+    # Question 1
+    question_no += 1
+    ques = input(f'\n{question_no}. Who is the Prime Minister of India? ')
+
+    if ques.lower() == 'narendra modi':
+        score += 1
+        print('Correct! You got 1 point')
+    else:
+        print('Incorrect!')
+        print(f'The correct answer is --> narendra Modi')
+
+    # Question 2
+    question_no += 1
+    ques = input(f'\n{question_no}. Who won the ODI World Cup in 2011? ')
+
+    if ques.lower() == 'india':
+        score += 1
+        print('Correct! You got 1 point')
+    else:
+        print('Incorrect!')
+        print(f'The correct answer is --> india')
+
+    # Question 3
+    question_no += 1
+    ques = input(f'\n{question_no}. Who won the ODI World Cup in 2019? ')
+
+    if ques.lower() == 'england':
+        score += 1
+        print('Correct! You got 1 point')
+    else:
+        print('Incorrect!')
+        print(f'The correct answer is --> england')
+
+    # Question 4
+    question_no += 1
+    ques = input(f'\n{question_no}. Who is the captain of Chennai Super Kings in the Indian Premier League? ')
+
+    if ques.lower() == 'mahendra dhoni singh':
+        score += 1
+        print('Correct! You got 1 point')
+    else:
+        print('Incorrect!')
+        print(f'The correct answer is --> mahendra dhoni singh')
+
+    # Question 5
+    question_no += 1
+    ques = input(f'\n{question_no}. Who won the Indian Premier League title in 2023? ')
+
+    if ques.lower() == 'chennai super kings':
+        score += 1
+        print('Correct! You got 1 point')
+    else:
+        print('Incorrect!')
+        print(f'The correct answer is --> chennai super kings')
+ # Question 6
+    question_no += 1
+    ques = input(f'\n{question_no}. Who is the Runnerup of Border Gavaskar trophy in 2023? ')
+
+    if ques.lower() == 'india':
+        score += 1
+        print('Correct! You got 1 point')
+    else:
+        print('Incorrect!')
+        print(f'The correct answer is --> india')
+else:
+    print('Thank you for playing!')
+    quit()
+
+print(f'\nNumber of questions: {question_no}')
+print(f'Your score: {score}')
+
+try:
+    percentage = (score * 100) / question_no
+except ZeroDivisionError:
+    print('0% of questions are correct')
+
+print(f'{percentage}% of questions are correct.')
